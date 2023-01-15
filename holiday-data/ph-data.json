@@ -1,0 +1,110 @@
+[
+  {
+    "date": "1/1/2023",
+    "name": "New Year's Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "4/10/2023",
+    "name": "Araw ng Kagitingan",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "4/6/2023",
+    "name": "Maundy Thursday",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "4/7/2023",
+    "name": "Good Friday",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "5/1/2023",
+    "name": "Labor Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "6/12/2023",
+    "name": "Independence Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "8/28/2023",
+    "name": "National Heroes Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "11/27/2023",
+    "name": "Bonifacio Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "12/25/2023",
+    "name": "Christmas Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "12/30/2023",
+    "name": "Rizal Day",
+    "category": "REGULAR",
+    "country": "PH"
+  },
+  {
+    "date": "2/25/2023",
+    "name": "EDSA People Power Revolution Anniversary",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "4/8/2023",
+    "name": "Black Saturday",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "8/21/2023",
+    "name": "Ninoy Aquino Day",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "11/1/2023",
+    "name": "All Saints' Day",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "12/8/2023",
+    "name": "Feast of the Immaculate Conception of Mary",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "12/31/2023",
+    "name": "Last Day of the Year",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "1/2/2023",
+    "name": "Additional Special (Non-Working) Day",
+    "category": "SPECIAL",
+    "country": "PH"
+  },
+  {
+    "date": "11/2/2023",
+    "name": "Additional Special (Non-Working) Day",
+    "category": "SPECIAL",
+    "country": "PH"
+  }
+]
