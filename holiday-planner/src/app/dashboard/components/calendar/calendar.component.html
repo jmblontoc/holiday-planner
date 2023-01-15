@@ -1,0 +1,38 @@
+<div fxLayout="row" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px" fxFlex="50">
+    <button
+      mat-stroked-button
+      color="primary"
+      mwlCalendarPreviousView
+      [view]="view"
+      [(viewDate)]="viewDate"
+    >
+      Previous
+    </button>
+    <button
+      mat-stroked-button
+      color="primary"
+      mwlCalendarToday
+      [(viewDate)]="viewDate"
+    >
+      Today
+    </button>
+    <button
+      mat-stroked-button
+      color="primary"
+      mwlCalendarNextView
+      [view]="view"
+      [(viewDate)]="viewDate"
+    >
+      Next
+    </button>
+  </div>
+  <div fxFlex="50" fxLayoutAlign="end end">
+    <h2>
+      {{ viewDate | calendarDate : view + "ViewTitle" : "en" }}
+    </h2>
+  </div>
+</div>
+
+<mwl-calendar-month-view [viewDate]="viewDate" [events]="events">
+</mwl-calendar-month-view>

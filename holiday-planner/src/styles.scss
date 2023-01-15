@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 html,
 body {
@@ -12,4 +14,34 @@ body {
 // Custom styles here
 .text-center {
   text-align: center;
+}
+
+@for $i from 1 through 5 {
+  .py-#{$i} {
+    padding-top: calc($i * 8px);
+    padding-bottom: calc($i * 8px);
+  }
+
+  .px-#{$i} {
+    padding-left: calc($i * 8px);
+    padding-right: calc($i * 8px);
+  }
+
+  .my-#{$i} {
+    margin-top: calc($i * 8px);
+    margin-bottom: calc($i * 8px);
+  }
+
+  .mx-#{$i} {
+    margin-left: calc($i * 8px);
+    margin-right: calc($i * 8px);
+  }
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.no-margin {
+  margin: 0;
 }
