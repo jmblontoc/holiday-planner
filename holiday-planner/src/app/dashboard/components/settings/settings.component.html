@@ -1,0 +1,59 @@
+<div fxLayout="column" class="my-2">
+  <div fxLayout="column">
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <label>Number of Leaves <i>(max of 25 days)</i>: </label>
+        <b>{{ formNumberOfLeaves.value }}</b>
+      </div>
+
+      <mat-slider min="1" max="25" step="1" value="2">
+        <input matSliderThumb [formControl]="formNumberOfLeaves" />
+      </mat-slider>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <label>Day Hunt Mode: </label>
+        <b>{{ getHuntModeStr() }}</b>
+      </div>
+      <mat-radio-group
+        aria-label="Select an option"
+        color="primary"
+        [formControl]="formHuntMode"
+        [value]="formHuntMode.value"
+      >
+        <mat-radio-button [value]="0">Forward</mat-radio-button>
+        <mat-radio-button [value]="1">Backward</mat-radio-button>
+        <mat-radio-button [value]="2">Surround</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div fxLayout="column">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <label>Country: </label>
+        <b></b>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="row">
+          <mat-checkbox
+            color="primary"
+            value="PH"
+            (change)="handleCountryChange($event)"
+            [checked]="isCheckboxChecked('PH')"
+            >PH</mat-checkbox
+          >
+          <mat-checkbox
+            color="primary"
+            value="SG"
+            (change)="handleCountryChange($event)"
+            [checked]="isCheckboxChecked('SG')"
+            >SG</mat-checkbox
+          >
+        </div>
+        <div fxFlex fxLayoutAlign="end">
+          <button mat-raised-button color="primary" (click)="resetForm()">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

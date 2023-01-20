@@ -1,8 +1,9 @@
-<div fxLayout="column">
-  <div fxLayout="column">
-    <h1 class="text-center">Holiday Planner</h1>
-  </div>
+<div fxLayout="column" class="px-1 py-1">
   <div fxLayout="column" class="px-2">
-    <app-calendar [holidays]="getMergedHolidays()"></app-calendar>
+    <app-calendar
+      [holidays]="getMergedHolidays()"
+      [plannedDates]="plannedDates"
+    ></app-calendar>
+    <app-settings [form]="settingsForm"></app-settings>
   </div>
 </div>

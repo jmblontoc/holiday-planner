@@ -1,18 +1,18 @@
 [
   {
-    "date": "01/01/2023",
+    "date": "01/02/2023",
     "name": "New Year's Day",
     "category": "REGULAR",
     "country": "SG"
   },
   {
-    "date": "01/22/2023",
+    "date": "01/23/2023",
     "name": "Chinese New Year",
     "category": "REGULAR",
     "country": "SG"
   },
   {
-    "date": "01/23/2023",
+    "date": "01/24/2023",
     "name": "Chinese New Year",
     "category": "REGULAR",
     "country": "SG"
@@ -24,7 +24,7 @@
     "country": "SG"
   },
   {
-    "date": "04/22/2023",
+    "date": "04/24/2023",
     "name": "Hari Raya Puasa",
     "category": "REGULAR",
     "country": "SG"
@@ -36,7 +36,7 @@
     "country": "SG"
   },
   {
-    "date": "06/03/2023",
+    "date": "06/05/2023",
     "name": "Vesak Day",
     "category": "REGULAR",
     "country": "SG"
@@ -54,7 +54,7 @@
     "country": "SG"
   },
   {
-    "date": "11/12/2023",
+    "date": "11/13/2023",
     "name": "Deepavali",
     "category": "REGULAR",
     "country": "SG"
