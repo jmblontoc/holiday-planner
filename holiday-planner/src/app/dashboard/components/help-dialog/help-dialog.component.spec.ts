@@ -1,4 +1,6 @@
+import { DialogModule, DialogRef } from '@angular/cdk/dialog';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { HelpDialogComponent } from './help-dialog.component';
 
@@ -8,9 +10,15 @@ describe('HelpDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelpDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [HelpDialogComponent],
+      imports: [DialogModule, MatDividerModule],
+      providers: [
+        {
+          provide: DialogRef,
+          useValue: {},
+        },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HelpDialogComponent);
     component = fixture.componentInstance;

@@ -38,12 +38,10 @@ export class SettingsComponent {
     switch (+this.formHuntMode.value) {
       case HUNT_MODES.BACKWARD:
         return 'Backward';
-      case HUNT_MODES.FORWARD:
-        return 'Forward';
       case HUNT_MODES.SURROUND:
         return 'Surround';
       default:
-        return '';
+        return 'Forward';
     }
   }
 
