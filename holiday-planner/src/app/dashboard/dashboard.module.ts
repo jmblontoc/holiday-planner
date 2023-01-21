@@ -12,6 +12,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DialogModule } from '@angular/cdk/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { YesNoPipe } from '../pipes/yes-no.pipe';
@@ -36,6 +38,8 @@ import { HelpDialogComponent } from './components/help-dialog/help-dialog.compon
     MatButtonModule,
     MatSlideToggleModule,
     DialogModule,
+    MatDividerModule,
+    MatIconModule,
     ReactiveFormsModule,
   ],
 })

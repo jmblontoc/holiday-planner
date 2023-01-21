@@ -1,0 +1,58 @@
+<div fxLayout="column" class="help-container px-2 py-2">
+  <strong>Welcome to The Holiday Planner!</strong>
+  <div class="my-1">Before you use this app, let me onboard you!</div>
+  <mat-divider></mat-divider>
+
+  <div fxLayout="column" fxLayoutGap="5px" class="py-2">
+    <div>See the color legend below:</div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div
+        class="color-block"
+        [style.backgroundColor]="getBlockBackgroundColor('SG_RED')"
+      ></div>
+      <div>Singapore Holiday</div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div
+        class="color-block"
+        [style.backgroundColor]="getBlockBackgroundColor('PH_BLUE')"
+      ></div>
+      <div>Philippine Regular Holiday</div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div
+        class="color-block"
+        [style.backgroundColor]="getBlockBackgroundColor('PH_YELLOW')"
+      ></div>
+      <div>Philippine Special Holiday</div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div
+        class="color-block"
+        [style.backgroundColor]="getBlockBackgroundColor('LEAVE_DAY')"
+      ></div>
+      <div>Suggested Leave Day</div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div fxLayout="column" class="py-2">
+    <div>What is <em>DAY HUNT MODE</em>?</div>
+    <div class="my-1">
+      <em>DAY HUNT</em> is what I called the algorithm I made to <b>hunt</b> for
+      the <b>best possible day/s</b> to take your leave/s based on a holiday. 😁
+    </div>
+    <div>I have created 3 modes:</div>
+    <ul class="less-indent">
+      <li><b>Forward:</b> It hunts for days <u>after</u> a certain holiday</li>
+      <li>
+        <b>Backward:</b> It hunts for days <u>before</u> a certain holiday
+      </li>
+      <li><b>Surround:</b>It hunts for days <u>around</u> a certain holiday</li>
+    </ul>
+  </div>
+
+  <mat-divider></mat-divider>
+  <button mat-raised-button color="primary" (click)="closeHelpDialog()">
+    Close
+  </button>
+</div>

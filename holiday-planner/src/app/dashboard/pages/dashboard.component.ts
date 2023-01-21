@@ -6,6 +6,8 @@ import executeAlgorithm, { filterHolidays } from 'src/app/core/algorithm';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { defaultFormValues } from 'src/app/core/utils';
+import { Dialog } from '@angular/cdk/dialog';
+import { HelpDialogComponent } from '../components/help-dialog/help-dialog.component';
 
 const ALL_HOLIDAYS = [...sgHolidays, ...phHolidays] as HolidayItem[];
 
@@ -20,11 +22,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   private subs: Subscription[] = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public dialog: Dialog) {
     this.initializeSettingsForm();
   }
 
   ngOnInit(): void {
+    this.openHelpDialog();
+
     // To display leaves by default
     this.plannedDates = executeAlgorithm(this.settingsForm.value, ALL_HOLIDAYS);
 
@@ -56,5 +60,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.plannedDates = executeAlgorithm(value, ALL_HOLIDAYS);
       })
     );
+  }
+
+  openHelpDialog(): void {
+    this.dialog.open<string>(HelpDialogComponent, {
+      width: '75%',
+    });
   }
 }
