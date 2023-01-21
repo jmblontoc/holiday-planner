@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { COUNTRY_CODES, defaultFormValues } from 'src/app/core/utils';
 import { HUNT_MODES } from '../../dashboard.models';
 
@@ -22,6 +23,15 @@ export class SettingsComponent {
 
   get formHolidaySource(): FormControl {
     return this.form.get('holidaySource') as FormControl;
+  }
+
+  get formWillIncludeSpecialHolidays(): FormControl {
+    return this.form.get('willIncludeSpecialHolidays') as FormControl;
+  }
+
+  get holidaySourceText(): string {
+    const value = this.formHolidaySource.value;
+    return value.join(', ');
   }
 
   getHuntModeStr(): string {
@@ -62,5 +72,10 @@ export class SettingsComponent {
       ...defaultFormValues,
       holidaySource: [COUNTRY_CODES.PH],
     });
+  }
+
+  handleWillIncludeSpecialHolidayChange(eventObj: MatSlideToggleChange) {
+    const isChecked = eventObj.checked;
+    this.formWillIncludeSpecialHolidays.setValue(isChecked);
   }
 }

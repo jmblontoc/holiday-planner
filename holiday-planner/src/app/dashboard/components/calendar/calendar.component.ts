@@ -25,7 +25,7 @@ export class CalendarComponent implements OnChanges {
     plugins: [dayGridPlugin, interactionPlugin],
     dateClick: this.onDateClick,
     eventClick: this.onEventClick,
-    aspectRatio: 1,
+    aspectRatio: 0.8,
   };
 
   ngOnChanges(changes: SimpleChanges): void {

@@ -1,7 +1,7 @@
 export type HolidayItem = {
   date: string;
   name: string;
-  category: string;
+  category: HOLIDAY_CATEGORY;
   country: string;
 };
 
@@ -19,10 +19,16 @@ export type FormSettings = {
   numberOfLeaves: number;
   holidaySource: string[];
   huntMode: HUNT_MODES;
+  willIncludeSpecialHolidays: boolean;
 };
 
 export enum HUNT_MODES {
   FORWARD,
   BACKWARD,
   SURROUND,
+}
+
+export enum HOLIDAY_CATEGORY {
+  REGULAR = 'REGULAR',
+  SPECIAL = 'SPECIAL',
 }

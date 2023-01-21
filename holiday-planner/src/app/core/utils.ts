@@ -32,4 +32,5 @@ export const defaultFormValues: FormSettings = {
   huntMode: HUNT_MODES.FORWARD,
   numberOfLeaves: 2,
   holidaySource: ['PH'],
+  willIncludeSpecialHolidays: true,
 };

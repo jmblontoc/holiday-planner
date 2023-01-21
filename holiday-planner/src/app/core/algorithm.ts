@@ -2,18 +2,21 @@ import {
   FormSettings,
   HolidayHuntItem,
   HolidayItem,
+  HOLIDAY_CATEGORY,
   HuntedDay,
   HUNT_MODES,
 } from '../dashboard/dashboard.models';
 import moment from 'moment';
-import { DATE_FORMAT, isFreeDay } from './utils';
+import { COUNTRY_CODES, DATE_FORMAT, isFreeDay } from './utils';
 
 const executeAlgorithm = (
   settings: FormSettings,
   allHolidays: HolidayItem[]
 ): HolidayHuntItem[] => {
   const finalData: HolidayHuntItem[] = [];
-  allHolidays.forEach((holiday) => {
+  const filteredHolidays = filterHolidays(allHolidays, settings);
+
+  filteredHolidays.forEach((holiday) => {
     const holidayDateParsed: moment.Moment = moment(holiday.date, DATE_FORMAT);
     let holidayDayRangeList: HuntedDay[] = [];
 
@@ -148,6 +151,39 @@ const getOtherMode = (mode: HUNT_MODES): HUNT_MODES => {
   } else {
     return HUNT_MODES.BACKWARD;
   }
+};
+
+export const filterHolidays = (
+  allHolidays: HolidayItem[],
+  settings: FormSettings
+): HolidayItem[] => {
+  const countries: string[] = settings.holidaySource;
+  const willIncludeSpecialHolidays: boolean =
+    settings.willIncludeSpecialHolidays;
+
+  let result: HolidayItem[] = [];
+
+  if (countries.includes(COUNTRY_CODES.SG)) {
+    result = [
+      ...result,
+      ...allHolidays.filter((holiday) => holiday.country === COUNTRY_CODES.SG),
+    ] as HolidayItem[];
+  }
+
+  if (countries.includes(COUNTRY_CODES.PH)) {
+    result = [
+      ...result,
+      ...allHolidays.filter((holiday) => holiday.country === COUNTRY_CODES.PH),
+    ] as HolidayItem[];
+  }
+
+  if (!willIncludeSpecialHolidays) {
+    result = result.filter(
+      (holiday) => holiday.category !== HOLIDAY_CATEGORY.SPECIAL
+    );
+  }
+
+  return result;
 };
 
 export default executeAlgorithm;
